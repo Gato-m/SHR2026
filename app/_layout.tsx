@@ -3,14 +3,17 @@ import { Stack } from 'expo-router';
 export default function RootLayout() {
   return (
     <Stack>
-      {/* Tabs grupa */}
+      {/* Tabs */}
       <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
 
-      {/* Modal ekrāns */}
+      {/* Modal */}
       <Stack.Screen
         name="staff/[id]"
         options={{ presentation: 'modal', title: 'Darbinieka dati' }}
       />
+
+      {/* Admin drawer */}
+      <Stack.Screen name="admin" options={{ headerShown: false }} />
     </Stack>
   );
 }
