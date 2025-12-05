@@ -33,18 +33,18 @@ export default function TabsLayout() {
         }}
       />
       <Tabs.Screen
-        name="staff"
+        name="addData"
         options={{
-          title: 'Darbinieki',
+          title: 'Pievienot datus',
           tabBarIcon: ({ color, size }) => (
-            <Ionicons name={icons.staff} size={size} color={color} />
+            <Ionicons name={icons.addData} size={size} color={color} />
           ),
         }}
       />
       <Tabs.Screen
-        name="addData"
+        name="staff"
         options={{
-          title: 'Pievienot datus',
+          title: 'Darbinieki',
           tabBarIcon: ({ color, size }) => (
             <Ionicons name={icons.staff} size={size} color={color} />
           ),
