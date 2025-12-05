@@ -94,7 +94,7 @@ export default function StaffModal() {
 
       <Image
         source={require('../../assets/cal2.png')}
-        style={{ width: 300, height: 300, marginTop: 5, marginBottom: 30 }}
+        style={{ width: 350, height: 350, marginTop: 5, marginBottom: 30 }}
       />
 
       <Pressable
