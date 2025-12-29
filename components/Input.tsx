@@ -16,7 +16,7 @@ export default function Input({ style, ...props }: TextInputProps) {
         },
         style,
       ]}
-      placeholderTextColor={colors.border}
+      placeholderTextColor={colors.textSecondary}
       {...props}
     />
   );
