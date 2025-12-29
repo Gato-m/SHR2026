@@ -1,5 +1,10 @@
-import { View, Text, FlatList, Pressable } from 'react-native';
+import { FlatList, Pressable } from 'react-native';
 import { Link } from 'expo-router';
+import Screen from '../../components/Screen';
+import Text from '../../components/Text';
+import Card from '../../components/Card';
+import Button from '../../components/Button';
+import { useTheme } from '../../src/theme/useTheme';
 
 const staffMembers = [
   { id: '1', name: 'Anna Ozola' },
@@ -8,28 +13,27 @@ const staffMembers = [
 ];
 
 export default function StaffList() {
+  const { spacing, colors } = useTheme();
+
   return (
-    <View style={{ flex: 1, padding: 16 }}>
-      <Text style={{ fontSize: 20, fontWeight: 'bold', marginBottom: 12 }}>Personāls</Text>
+    <Screen style={{ flex: 1, padding: 16 }}>
+      <Text style={{ fontSize: 24, marginBottom: 16 }}>Personāls</Text>
 
       <FlatList
         data={staffMembers}
         keyExtractor={(item) => item.id}
         renderItem={({ item }) => (
-          <Link href={`/staff/${item.id}`} asChild>
-            <Pressable
-              style={{
-                padding: 12,
-                marginBottom: 8,
-                backgroundColor: '#eee',
-                borderRadius: 6,
-              }}
-            >
-              <Text>{item.name}</Text>
-            </Pressable>
-          </Link>
+          <Card style={{ backgroundColor: colors.card, marginBottom: spacing[3] }}>
+            <Link href={`/staff/${item.id}`} asChild>
+              <Pressable>
+                <Text>{item.name}</Text>
+              </Pressable>
+            </Link>
+          </Card>
         )}
       />
-    </View>
+
+      <Button title="Click me" onPress={() => {}} />
+    </Screen>
   );
 }

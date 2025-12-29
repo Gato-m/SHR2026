@@ -1,9 +1,12 @@
-import { View, Text } from 'react-native';
+import Screen from '../../components/Screen';
+import Text from '../../components/Text';
+import Button from '../../components/Button';
 
 export default function addData() {
   return (
-    <View>
-      <Text>Pievienot datus</Text>
-    </View>
+    <Screen>
+      <Text style={{ fontSize: 24, marginBottom: 16 }}>Pievienot datus</Text>
+      <Button title="Click me" onPress={() => {}} />
+    </Screen>
   );
 }
